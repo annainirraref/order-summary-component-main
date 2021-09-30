@@ -1,0 +1,140 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+:root{
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+body{
+    background-color: var(--pale-blue);
+}
+
+a{
+  text-decoration: none;
+}
+
+.container{
+  height:100vh;
+  width:100%;
+  background: url(images/pattern-background-desktop.svg) no-repeat;
+  display:flex;
+  justify-content:center;
+
+}
+
+.wrapper{
+  align-self:center;
+  height:85%;
+  background:white;
+  width: 33%;
+  border-radius: 20px;
+  overflow:hidden;
+
+  display:grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 30% auto;
+  grid-template-areas: "header" "section";
+
+}
+
+ header{
+   grid-area:header;
+
+ }
+
+.img-header{
+  width:100%;
+}
+
+ section{
+   grid-area:section;
+   padding:8%;
+   justify-content:center;
+
+ }
+
+h1{
+  font-weight:900;
+  font-size: 1.8em;
+  margin: 1em 0 0.6em 0;
+}
+
+h1, p {
+ text-align:center;
+}
+
+.description{
+  color: var(--desaturated-blue);
+  margin-bottom: 1.2em;
+  line-height: 1.5em;
+}
+
+.annual-plan{
+  display:grid;
+  grid-template-columns: 0.6fr 1.4fr 1fr;
+  background-color:var(--very-pale-blue);
+  width: 100%;
+  padding:15px;
+  border-radius: 10px;
+  grid-row: 1;
+  color: var(--desaturated-blue);
+}
+
+.iconmusic{
+place-self: center;
+}
+
+
+.plan-description {
+  place-self: center;
+  line-height: 1.3em;
+}
+
+.link-change{
+place-self:center;
+font-size: 0.9em;
+color: var(--bright-blue);
+}
+
+
+.proceed{
+  padding:2%;
+  margin-top: 1.5em;
+}
+
+button.proceedbutton{
+  width: 100%;
+  background-color: var(--bright-blue);
+  border: none;
+  border-radius: 10px;
+  padding: 1.2em;
+  box-shadow: 0px 11px 30px var(--pale-blue);
+  color: white;
+}
+button.proceedbutton:hover{
+  cursor: pointer;
+}
+.cancel{
+  padding:2%;
+}
+
+button.cancelbutton{
+  width: 100%;
+  background-color:transparent;
+  border: none;
+  border-radius: 10px;
+  padding: 1.2em;
+  color:var(--desaturated-blue);
+}
+
+button.cancelbutton:hover{
+  cursor: pointer;
+}
